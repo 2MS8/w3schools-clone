@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>w3schools</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            box-sizing: border-box;
+            overflow-y: visible;
+        }
+
+        .header {
+            background-color: white;
+            display: flex;
+
+            overflow: hidden;
+        }
+
+        .header a {
+            padding: 18px 22px;
+            text-decoration: none;
+            font-size: 1.1vw;
+            font-family: 'Source Sans Pro', sans-serif;
+            color: black;
+            font-weight: 510;
+        }
+
+        .header a:hover {
+            color: white;
+            background-color: #04AA6D;
+        }
+
+        .rightnav {
+            float: right;
+            overflow: hidden;
+        }
+
+        .nav {
+            background-color: rgb(32, 27, 39);
+            display: flex;
+            overflow: hidden;
+            position: sticky;
+            top: 0.1px;
+            z-index: 2;
+        }
+
+        .nav a {
+            padding: 15px 22px;
+            text-decoration: none;
+            font: 1.4vw;
+            color: white;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: 600;
+            /* position: relative;
+            top: 10px; */
+            padding-bottom: 3px;
+        }
+
+        .nav a:hover {
+            color: white;
+            background-color: black;
+        }
+
+        .article {
+            display: flex;
+            overflow: hidden;
+
+        }
+
+        .box1 {
+            width: 15%;
+            height: 100vh;
+            overflow: scroll;
+            /* position: sticky;
+            top: 100px; */
+
+
+            background-color: rgb(241, 239, 239);
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: 100;
+
+        }
+
+
+        .box2 {
+            width: 85%;
+            display: flex;
+            /* overflow-y:scroll;
+            overflow-x: none; */
+            overflow: auto;
+            overflow-x: hidden;
+
+
+
+            height: 100vh;
+
+            /* position: relative;
+            left:15vw; */
+
+        }
+
+        /* .box2a {
+            width: 90vw;
+        } */
+
+        /* .box2b {
+            width: 10vw;
+        } */
+
+
+        .box1 ul {
+            list-style: none;
+            position: relative;
+            right: 25px;
+
+        }
+
+        .box1 ul li {
+            font-size: 1vw;
+            padding: 3px;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: lighter;
+        }
+
+        #title {
+            font-size: 3vw;
+            padding-top: 150px;
+            padding-left: 30px;
+            padding-bottom: 10px;
+            margin: 0;
+            /* font-weight: 100;
+            font-family: 'Source Sans Pro', sans-serif; */
+        }
+
+        .navigator {
+            display: flex;
+            overflow: hidden;
+            padding-left: 30px;
+            padding-top: 10px;
+            padding-bottom: 20px;
+        }
+
+        .left {
+            width: 50vw;
+            height: 40px;
+
+        }
+
+        .right {
+            width: 50vw;
+            height: 40px;
+        }
+
+        .navigator a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.4vw;
+            padding: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            background-color: #04AA6D;
+            border-radius: 10px;
+            /* border: 3px black solid; */
+        }
+
+        /* .navigator a:hover{
+            color: white;
+            background-color: green;
+            border-radius: 19px;
+        } */
+        .content {
+            padding-top: 20px;
+            padding-left: 30px;
+            background-color: #dcfff2;
+            height: 35vh;
+            width: 60vw;
+
+        }
+
+        .content p {
+            font-size: 1.2vw;
+            padding: 5px;
+        }
+
+        .content p a {
+            text-decoration: none;
+            color: white;
+            background-color: #04AA6D;
+            padding-top: 10px;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        i {
+            color: black;
+        }
+
+        #arrow {
+            color: black;
+            position: relative;
+            top: 7px;
+        }
+
+        #arrow:hover {
+            color: white;
+        }
+
+        #home {
+            font-size: 30px;
+            position: relative;
+            bottom: 7px;
+
+
+        }
+
+        .paid {
+            position: relative;
+            left: 38vw;
+            /* top: 10px; */
+            margin-top: 10px;
+            height: 16px;
+        }
+
+        .paid:hover {
+            color: white;
+            background-color: #04AA6D;
+            border-radius: 30px;
+        }
+
+        .paid a {
+            position: relative;
+            top: 10px;
+        }
+
+        .login {
+            position: relative;
+            left: 40vw;
+            background-color: #04AA6D;
+            border-radius: 30px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .example p {
+            padding: 20px;
+            margin-left: 15px;
+            font-size: 2.3vw;
+        }
+
+        .hundred {
+            margin-left: 35px;
+            font-size: 1.2vw;
+
+        }
+
+        .frame {
+            background-color: rgb(241, 239, 239);
+            height: 60vh;
+            width: 62vw;
+            margin-left: 15px;
+            border-radius: 10px;
+        }
+
+        .frame p {
+            margin-left: 20px;
+            padding-top: 20px;
+            font-size: 1.5vw;
+        }
+
+        .subframe {
+            background-color: white;
+            position: relative;
+            top: 0.1px;
+            left: 25px;
+            /* bottom: 5vh; */
+            height: 40vh;
+            width: 58vw;
+        }
+
+        .subframe p {
+            font-size: 1.1vw;
+        }
+
+        /* .try p{
+    background-color: green;
+    padding-top: 6px;
+    padding-left: 5px;
+    margin-top: 40px;
+    height: 30px;
+    width: 140px;
+    font-size: 1.2vw;
+ 
+  
+} */
+        .try {
+            box-sizing: border-box;
+            background-color: #04AA6D;
+            position: relative;
+            left: -20px;
+            top: 15px;
+            width: 160px;
+            padding-top: 10px;
+            text-align: center;
+            border-radius: 10px;
+
+        }
+
+        .try a {
+            position: relative;
+            bottom: 10px;
+            text-decoration: none;
+            color: white;
+
+
+        }
+
+        .click {
+            padding: 20px;
+            margin: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .css-example {
+            height: auto;
+            margin-left: 30px;
+        }
+
+        .css-example-p {
+            font-size: 2.3vw;
+        }
+
+        .Go a {
+            color: black;
+            font-size: 1.2vw;
+        }
+
+        .Go a:hover {
+            color: #04AA6D;
+        }
+
+        .exercise-btn {
+
+            background-color: #04AA6D;
+            width: 150px;
+            height: 40px;
+            border-radius: 10px;
+        }
+
+        .exercise-btn a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2vw;
+            position: relative;
+            top: 6px;
+            left: 10px;
+
+
+        }
+
+        .exercise-btn:hover {
+            color: white;
+            background-color: #05724a;
+        }
+
+        .quiz-btn {
+            background-color: rgb(90, 90, 223);
+            width: 150px;
+            height: 40px;
+            text-align: center;
+            border-radius: 10px;
+
+        }
+
+        .quiz-btn a {
+
+            color: white;
+            text-decoration: none;
+            font-size: 1.2vw;
+            position: relative;
+            top: 6px;
+        }
+
+        .quiz-btn:hover {
+            color: white;
+            background-color: rgb(55, 55, 160);
+        }
+
+        .css-references a {
+            color: black;
+            font-size: 1.2vw;
+        }
+
+        .css-references a:hover {
+            color: #04AA6D;
+        }
+
+        .bottom-navigation {
+            display: flex;
+            overflow: hidden;
+            box-sizing: border-box;
+
+
+        }
+
+        .bottom {
+            width: 17.5%;
+            font-size: 1.1vw;
+            background-color: rgb(231, 228, 228);
+            text-align: center;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .bottom:hover {
+            background-color: rgb(177, 174, 174);
+        }
+
+        .footer {
+            display: flex;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        .down {
+            width: 17.5%;
+            text-align: center;
+            padding: 18px;
+
+
+        }
+
+        .down ul {
+            list-style: none;
+
+        }
+
+        .down ul li:hover {
+            color: #04AA6D;
+            text-decoration: underline;
+        }
+
+        #certified {
+            padding-top: 20px;
+        }
+
+        #certified a {
+            text-decoration: none;
+            color: white;
+            background-color: rgb(54, 54, 54);
+            padding: 10px;
+            padding-top: 10px;
+            border-radius: 6px;
+        }
+
+        #certified-right {
+            position: relative;
+            top: 7px;
+        }
+
+        #certified a:hover {
+            color: white;
+            background-color: black;
+            text-decoration: none;
+        }
+
+        #certified:hover {
+            text-decoration: none;
+        }
+
+        .footer-p {
+            box-sizing: border-box;
+            width: 85vw;
+            padding: 10px 40px 20px;
+        }
+
+        .footer-p p {
+            font-size: 1vw;
+            color: rgb(87, 86, 86);
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <a href="#" style=" font-size: 1.2vw;"> w <sup>3</sup> schools</a>
+        <a href="#"> Reference <span class="material-icons" id="arrow">
+                keyboard_arrow_down
+            </span></a>
+        <a href="#">Tutorials <span class="material-icons" id="arrow">
+                keyboard_arrow_down
+            </span></a>
+        <a href="#"> Exercise <span class="material-icons" id="arrow">
+                keyboard_arrow_down
+            </span></a>
+
+        <a href="#" class="paid">Paid course</a>
+        <a href="#" class="login">Log in</a>
+
+    </div>
+    <div class="nav">
+        <a href="#"><span class="material-icons" id="home">
+                home
+            </span></a>
+        <a href="#">HTML</a>
+        <a href="#">CSS</a>
+        <a href="#">JAVASCRIPT</a>
+        <a href="#">BOOTSRTAP</a>
+        <a href="#">PYTHON</a>
+        <a href="#">C++</a>
+        <a href="#">HOW TO</a>
+        <a href="#">SQL</a>
+        <a href="#">PHP</a>
+        <a href="#">JAVA</a>
+        <a href="#">JQUERY</a>
+        <a href="#">REACT</a>
+
+
+    </div>
+    <div class="article">
+        <div class="box1">
+            <ul>
+                <li style="font-size: 1.5vw;">CSS Tutorials</li>
+                <li>CSS Home</li>
+                <li>CSS Introduction</li>
+                <li>CSS Syntax</li>
+                <li>CSS selectors</li>
+                <li>CSS How to</li>
+                <li>CSS Comments</li>
+                <li>CSS colors</li>
+                <li>CSS background</li>
+                <li>CSS Borders</li>
+                <li>CSS margins</li>
+                <li>CSS padding</li>
+                <li>CSS height/width</li>
+                <li>CSS box model</li>
+                <li>CSS outline</li>
+                <li>CSS text</li>
+                <li>CSS Fonts</li>
+                <li>CSS Icons</li>
+                <li>CSS Links</li>
+                <li>CSS list</li>
+                <li>CSS Home</li>
+                <li>CSS Introduction</li>
+                <li>CSS Syntax</li>
+                <li>CSS selectors</li>
+                <li>CSS How to</li>
+                <li>CSS Comments</li>
+                <li>CSS colors</li>
+                <li>CSS background</li>
+                <li>CSS Borders</li>
+                <li>CSS margins</li>
+                <li>CSS padding</li>
+                <li>CSS height/width</li>
+                <li>CSS box model</li>
+                <li>CSS outline</li>
+                <li>CSS text</li>
+                <li>CSS Fonts</li>
+                <li>CSS Icons</li>
+                <li>CSS Links</li>
+                <li>CSS list</li>
+                <li>CSS Home</li>
+                <li>CSS Introduction</li>
+                <li>CSS Syntax</li>
+                <li>CSS selectors</li>
+                <li>CSS How to</li>
+                <li>CSS Comments</li>
+                <li>CSS colors</li>
+                <li>CSS background</li>
+                <li>CSS Borders</li>
+                <li>CSS margins</li>
+                <li>CSS padding</li>
+                <li>CSS height/width</li>
+                <li>CSS box model</li>
+                <li>CSS outline</li>
+                <li>CSS text</li>
+                <li>CSS Fonts</li>
+                <li>CSS Icons</li>
+                <li>CSS Links</li>
+                <li>CSS list</li>
+            </ul>
+        </div>
+        <div class="box2">
+            <div class="box2a">
+                <p id="title">CSS Tutorial</p>
+                <div class="navigator">
+                    <div class="left">
+                        <a href="#">Home</a>
+                    </div>
+                    <div class="right">
+                        <a href="#" class="next">Next</a>
+                    </div>
+
+
+                </div>
+                <div class="content">
+                    <p>CSS is the language we use to style an HTML document.</p>
+                    <p>CSS describes how HTML elements should be displayed.</p>
+                    <p>This tutorial will teach you CSS from basic to advanced.</p>
+                    <p>
+                        <a href="#">Start learning css now</a>
+                    </p>
+
+
+
+                </div>
+                <div class="example">
+                    <p>Examples in Each Chapter</p>
+                </div>
+                <div class="hundred">
+                    <p>This CSS tutorial contains hundreds of CSS examples.</p>
+                    <p>With our online editor, you can edit the CSS, and click on a button to view the result.</p>
+
+                </div>
+                <div class="frame">
+                    <p>CSS Examples</p>
+                    <div class="subframe">
+                        <p>body { <br>
+                            background-color: lightblue;<br>
+                            } <br>
+                            <br>
+                            h1 {<br>
+                            color: white; <br>
+                            text-align: center; <br>
+                            } <br>
+                            <br>
+                            p { <br>
+                            font-family: verdana; <br>
+                            font-size: 20px; <br>
+                            }
+                        </p>
+
+                        <p class="try"><a href="#"> Try it Yourself</a></p>
+
+
+                    </div>
+
+                </div>
+                <div class="click">
+                    <p>Click on the "Try it Yourself" button to see how it works.</p>
+                    <hr style="color: whitesmoke;">
+
+                </div>
+                <div class="css-example">
+                    <p class="css-example-p">Use the Examples</p>
+                    <p style="font-size: 1.2vw;">Learn from over 300 examples! With our editor, you can edit the CSS,
+                        and click on a button to view the result.</p>
+                    <p class="Go"><a href="#">Go to css example !</a></p>
+                    <hr style="color: whitesmoke;">
+                </div>
+                <div class="css-example">
+                    <p class="css-example-p">CSS Menu</p>
+                    <p style="font-size: 1.2vw;">We recommend reading this tutorial, in the sequence listed in the menu.
+                    </p>
+                    <p style="font-size: 1.2vw;">If you have a large screen, the menu will always be present on the
+                        left.</p>
+                    <p style="font-size: 1.2vw;">If you have a small screen, open the menu by clicking the top menu sign
+                        ☰.</p>
+                    <hr style="color: whitesmoke;">
+                </div>
+                <div class="css-example">
+                    <p class="css-example-p">CSS Template</p>
+                    <p style="font-size: 1.2vw;">We have created some responsive W3.CSS templates for you to use.</p>
+                    <p style="font-size: 1.2vw;">You are free to modify, save, share, and use them in all your projects.
+                    </p>
+                    <p class="Go"><a href="#">Go to css templates !</a></p>
+                    <hr style="color: whitesmoke;">
+
+
+                </div>
+                <div class="css-example">
+                    <p class="css-example-p">CSS Exercise and Quiz test</p>
+                    <p style="font-size: 1.2vw;">Test your CSS skills at W3Schools!</p>
+                    <p class="exercise-btn"><a href="#"> Start css exercise!</a></p>
+                    <p class="quiz-btn"> <a href="#">Start css quiz!</a></p>
+
+
+                    <hr style="color: whitesmoke;">
+
+                </div>
+                <div class="css-example">
+                    <p class="css-example-p">CSS References</p>
+                    <p style="font-size: 1.2vw;">At W3Schools you will find complete CSS references of all properties
+                        and selectors with syntax, examples, browser support, and more.</p>
+                    <p class="css-references"><a href="#">CSS Properties reference</a></p>
+                    <p class="css-references"><a href="#">CSS Selectors reference</a></p>
+
+                    <p class="css-references"><a href="#">CSS Functions reference</a></p>
+                    <p class="css-references"><a href="#">CSS Animatable</a></p>
+                    <p class="css-references"><a href="#">CSS Aural reference</a></p>
+                    <p class="css-references"><a href="#">CSS Units</a></p>
+                    <p class="css-references"><a href="#">CSS Color reference</a></p>
+                    <p class="css-references"><a href="#">CSS Default value</a></p>
+                    <p class="css-references"><a href="#">CSS Browser support</a></p>
+
+
+                    <hr style="color: whitesmoke;">
+                </div>
+
+                <div class="navigator">
+                    <div class="left">
+                        <a href="#">Home</a>
+                    </div>
+                    <div class="right">
+                        <a href="#" class="next">Next</a>
+                    </div>
+
+
+
+                </div>
+                <hr style="color: rgb(241, 239, 239);">
+                <div class="bottom-navigation">
+                    <div class="bottom first">
+                        <a href="#" style="text-decoration: none; color: rgb(22, 20, 20);">Report error</a>
+
+                    </div>
+                    <div class="bottom second">
+                        <a href="#" style="text-decoration: none; color: rgb(22, 20, 20);">Forum</a>
+
+                    </div>
+                    <div class="bottom third">
+                        <a href="#" style="text-decoration: none; color: rgb(22, 20, 20);">About</a>
+
+                    </div>
+                    <div class="bottom forth">
+                        <a href="#" style="text-decoration: none; color: rgb(22, 20, 20);">Shop</a>
+
+                    </div>
+                </div>
+                <hr style="color: rgb(241, 239, 239);">
+
+
+
+                <div class="footer">
+                    <div class="down first">
+                        <!-- <ul><li style="font-size:1.7vw; padding-bottom:15px;">Top tutorials</li> -->
+                        <ul>
+                            <p style="font-size:1.7vw; padding-bottom:10px;">Top tutorials</p>
+                            <li>HTML Tutorial</li>
+                            <li>CSS Tutorial</li>
+                            <li> JavaScript Tutorial</li>
+                            <li> How To Tutorial</li>
+                            <li>SQL Tutorial</li>
+                            <li> Python Tutorial</li>
+                            <li>W3.CSS Tutorial</li>
+                            <li>Bootstrap Tutorial</li>
+                            <li>PHP Tutorial</li>
+                            <li>Java Tutorial</li>
+                            <li>C++ Tutorial</li>
+                            <li>jQuery Tutorial</li>
+                        </ul>
+
+
+                    </div>
+                    <div class="down second">
+                        <!-- <ul><li style="font-size:1.7vw; padding-bottom:15px; padding-left: 30px;">Top reference</li> -->
+                        <ul>
+                            <p style="font-size:1.7vw; padding-bottom:15px; padding-left: 5px;">Top reference</p>
+                            <li>HTML Reference</li>
+                            <li>CSS Reference</li>
+                            <li>JavaScript Reference</li>
+                            <li>SQL Reference</li>
+                            <li> Python Reference</li>
+                            <li>W3.CSS Reference</li>
+                            <li>Bootstrap Reference</li>
+                            <li> PHP Reference</li>
+                            <li>HTML Colors</li>
+                            <li>Java Reference</li>
+                            <li>Angular Reference</li>
+                            <li> jQuery Reference</li>
+                        </ul>
+
+                    </div>
+                    <div class="down third">
+                        <!-- <ul><li style="font-size:1.7vw; padding-bottom:15px; text-align: center; padding-left: 28px;">Top example</li> -->
+                        <p style="font-size:1.7vw; padding-bottom:15px; text-align: center; padding-left: 28px;">Top
+                            example</p>
+                        <ul>
+                            <li>HTML Examples</li>
+                            <li>CSS Examples</li>
+                            <li>JavaScript Examples</li>
+                            <li>How To Examples</li>
+                            <li>SQL Examples</li>
+                            <li>Python Examples</li>
+                            <li> W3.CSS Examples</li>
+                            <li>Bootstrap Examples</li>
+                            <li>PHP Examples</li>
+                            <li>Java Examples</li>
+                            <li>XML Examples</li>
+                            <li>jQuery Examples</li>
+                        </ul>
+
+
+                    </div>
+                    <div class="down forth">
+                        <!-- <ul><li style="font-size:1.7vw; padding-bottom:15px; padding-left: 25px;">Web courses</li> -->
+                        <ul>
+                            <p style="text-align: center; font-size: 1.7vw; padding-bottom: 15px;">Web courses</p>
+                            <li>HTML Course </li>
+                            <li>CSS Course</li>
+                            <li> JavaScript Course</li>
+                            <li>Front End Course</li>
+                            <li>SQL Course</li>
+                            <li>Python Course</li>
+                            <li>PHP Course</li>
+                            <li>jQuery Course</li>
+                            <li>Java Course</li>
+                            <li> C++ Course</li>
+                            <li>C# Course</li>
+                            <li>XML Course</li>
+                            <li id="certified"><a href="#">Get certified <span class="material-icons"
+                                        id="certified-right">
+                                        keyboard_arrow_right
+                                    </span></a></li>
+                        </ul>
+
+
+
+                    </div>
+                </div>
+                <hr style="color:rgb(243, 239, 239);">
+                <div class="footer-p">
+                    <p>W3Schools is optimized for learning and training. Examples might be simplified to improve reading
+                        and learning. Tutorials, references, and examples are constantly reviewed to avoid errors, but
+                        we cannot warrant full correctness of all content. While using W3Schools, you agree to have read
+                        and accepted our terms of use, cookie and privacy policy.</p>
+                    <p>Copyright 1999-2021 by Refsnes Data. All Rights Reserved.
+                        W3Schools is Powered by W3.CSS.</p>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
